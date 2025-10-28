@@ -1,0 +1,199 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+}
+
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+a {
+  text-decoration: none;
+}
+.main-nav {
+  display: flex;
+  font-size: 1.5rem;
+  text-transform:uppercase;
+  margin-top: 34px;
+  list-style: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+.main-nav li {
+  margin-left: 36px;
+}
+.main-nav a {
+  color: rgb(246, 195, 117);
+}
+/* ナビゲーション内のリンクにカーソルを乗せたときの文字色を変える */
+.main-nav a:hover {
+  color: rgb(116, 125, 120);
+}
+.page-header {
+  display: flex;
+  justify-content: flex-end;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+/*  HOME
+-------------------------------------------------------------- */
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+/* 見出し */
+.page-title {
+  font-size: 5rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  color: rgb(246, 195, 117);
+}
+/* 大きな背景画像 */
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+}
+#home {
+  background-image: url(../portfolio/images/main-bg.png);
+    
+  
+  min-height: 100vh;
+}
+#home .page-title {
+  text-transform: none;
+}
+/* works */
+.works-content {
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+.works-title {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(246, 195, 117);
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 2px; 
+  letter-spacing: 0.05em; 
+  line-height: 1.1;
+}
+.works-content p {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: auto auto;
+  margin-top: 6%;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.grid img {
+  height: 350px;
+  object-fit: contain;
+  width: 100%;
+}  
+  
+.a4 {
+  aspect-ratio: 210 / 297;
+}  
+.square {
+  aspect-ratio: 1 / 1;
+}
+.item {
+  text-align: center;
+}
+
+/* about */
+.about-content {
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+.about-title {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(246, 195, 117);
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 2px; 
+  letter-spacing: 0.05em; 
+  line-height: 1.1;
+}
+.about-content h3 {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.about-content p {
+  display: inline-block;
+  text-align: left;
+  font-size: 1rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* skill */
+.skill-content {
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+.skill-title {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(246, 195, 117);
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 2px; 
+  letter-spacing: 0.05em; 
+  line-height: 1.1;
+}
+.skill-content h4 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列に並べる */
+  gap: 70px; /* 各アイコンの間隔 */
+  justify-items: center;
+  align-items: center;
+}
+
+.icon i {
+  font-size: 6rem;
+  color: rgb(197, 222, 202);
+  margin-bottom: 10px;
+  }
+.icon p {
+   display: inline-block;
+  text-align: left;
+  font-size: 1rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* contact */
+.contact-content {
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+.contact-title {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(246, 195, 117);
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 2px; 
+  letter-spacing: 0.05em; 
+  line-height: 1.1;
+}
+.contact-content p {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
