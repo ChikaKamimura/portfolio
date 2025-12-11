@@ -292,6 +292,7 @@ footer p {
 
   /* ファーストビュー */
   #home {
+    position: relative;
     min-height: 70vh;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -299,6 +300,14 @@ footer p {
   .page-title {
     font-size: 2.5rem;
     padding: 3rem 1.5rem;
+  }
+   .home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
   }
 
   /* 全体の余白縮小 */
@@ -319,6 +328,9 @@ footer p {
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .skills-grid p {
+    padding: 0 20px;
   }
 
   /* About の文章 */
