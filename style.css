@@ -1,12 +1,15 @@
 @charset "UTF-8";
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 body{
   font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.7;
   color: #333;
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
@@ -18,13 +21,18 @@ a {
   margin-top: 34px;
   list-style: none;
   font-family: "Nunito", sans-serif;
-  font-weight: 600;
+  font-weight: 800;
 }
 .main-nav li {
   margin-left: 36px;
 }
-.main-nav a {
+.main-nav a{
   color: rgb(246, 195, 117);
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+    1px  1px 0 #fff;
 }
 /* ナビゲーション内のリンクにカーソルを乗せたときの文字色を変える */
 .main-nav a:hover {
@@ -39,11 +47,26 @@ a {
   margin: 0 auto;
   padding: 0 4%;
 }
+/* PC用メニューを表示 */
+.pc-nav {
+  display: block;
+}
+.sp-nav,
+.hamburger {
+  display: none;
+}
+.sp-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
 /*  HOME
 -------------------------------------------------------------- */
 .home-content {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 0%;
 }
 /* 見出し */
 .page-title {
@@ -51,6 +74,18 @@ a {
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   color: rgb(246, 195, 117);
+   text-shadow:
+    -2px -2px 0 #ffffff,
+     2px -2px 0 #ffffff,
+    -2px  2px 0 #ffffff,
+     2px  2px 0 #ffffff;
+/* js */
+  background: rgba(197, 222, 202, 0.2);
+  display: inline-block;
+  padding: 5rem 2rem;
+  border-radius:  50%;
+  
+
 }
 /* 大きな背景画像 */
 .big-bg {
@@ -58,9 +93,7 @@ a {
   background-position: center top;
 }
 #home {
-  background-image: url(../portfolio/images/main-bg.png);
-    
-  
+  background-image: url(images/main-bg.png);
   min-height: 100vh;
 }
 #home .page-title {
@@ -80,6 +113,12 @@ a {
   margin-bottom: 2px; 
   letter-spacing: 0.05em; 
   line-height: 1.1;
+}
+.works-content h3 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
 }
 .works-content p {
   text-align: center;
@@ -127,8 +166,15 @@ a {
   line-height: 1.1;
 }
 .about-content h3 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+}
+.about-content h4 {
   margin-top: 80px;
   margin-bottom: 40px;
+  color: (116, 125, 120);
 }
 .about-content p {
   display: inline-block;
@@ -152,12 +198,19 @@ a {
   letter-spacing: 0.05em; 
   line-height: 1.1;
 }
-.skill-content h4 {
+.skill-content h3 {
   text-align: center;
   font-size: 1rem;
   font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
 }
-.grid {
+.skill-content h5 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Noto Sans JP", sans-serif;
+  color: (116, 125, 120)
+}
+.skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3列に並べる */
   gap: 70px; /* 各アイコンの間隔 */
@@ -171,7 +224,7 @@ a {
   margin-bottom: 10px;
   }
 .icon p {
-   display: inline-block;
+  display: inline-block;
   text-align: left;
   font-size: 1rem;
   font-family: "Noto Sans JP", sans-serif;
@@ -181,7 +234,7 @@ a {
 .contact-content {
   text-align: center;
   margin-top: 200px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 .contact-title {
   text-align: center;
@@ -192,8 +245,153 @@ a {
   letter-spacing: 0.05em; 
   line-height: 1.1;
 }
-.contact-content p {
+.contact-content h3 {
   text-align: center;
   font-size: 1rem;
   font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+}
+
+footer {
+  background: #c5deca;
+  padding: 2rem 0;
+  width: 100%;
+  margin: 0;
+}
+footer .wrapper {
+  padding: 0;
+  max-width: none;   
+}
+footer p {
+  color: #333;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* ======================
+  レスポンシブ対応
+====================== */
+@media (max-width: 768px) {
+
+  /* ナビゲーション */
+  .pc-nav {
+    display: none;
+  }
+  .sp-nav,
+  .hamburger {
+    display: block;
+  }
+  .main-nav {
+    font-size: 1rem;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  .main-nav li {
+    margin-left: 10px;
+  }
+
+  /* ファーストビュー */
+  #home {
+    min-height: 70vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .page-title {
+    font-size: 2.5rem;
+    padding: 3rem 1.5rem;
+  }
+
+  /* 全体の余白縮小 */
+  .works-content,
+  .about-content,
+  .skill-content,
+  .contact-content {
+    margin-top: 100px;
+  }
+
+  /* Worksを1列に */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Skill のアイコンを1列に */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* About の文章 */
+  .about-content p {
+    text-align: left;
+    width: 90%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ▼ハンバーガー表示 */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 2000;
+    height: auto;
+    overflow: visible;
+    top: 25px;
+}
+.hamburger span {
+  background: rgb(246, 195, 117);
+  height: 3px;
+  width: 36px;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.35s ease;
+  transform-origin: center;
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(10.5px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0; 
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10.5px) rotate(-45deg);
+}
+
+  /* ▼スマホ用スライドメニュー */
+  .sp-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 220px;
+    height: 100vh;
+    background:#fff;
+    padding-top: 80px;
+    list-style: none;
+    transition: right 0.3s;
+    margin: 0;
+    z-index: 1500;
+  }
+
+  .sp-menu li {
+    margin: 20px;
+  }
+
+  .sp-menu a {
+    color: rgb(246, 195, 117);
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  /* 開いたとき */
+  .sp-menu.active {
+    right: 0;
+  }
 }

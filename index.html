@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>上村千佳のポートフォリオ</title>
   <meta name="description" content="Webデザイナー上村千佳のポートフォリオ">
   <!-- googleフォント -->
@@ -12,21 +12,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 <!-- googleフォント -->
   <link rel="stylesheet" href="style.css">
+  <script src="js/script.js"defer></script>
   <script src="https://kit.fontawesome.com/b3dc2f85e6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+   
 <div id="home" class="big-bg">  
  
   <header class="page-header wrapper">
-    <h1></h1>
-   <nav>
+  
+   <nav class="pc-nav">
     <ul class="main-nav">
-      <li><a href="works.html">Works</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
    </nav>
+  
+ <!--ハンバーガーメニュー-->
+  <div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<nav class="sp-nav"> 
+  <ul class="sp-menu">
+    <li><a href="#works">Works</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
   </header>
 
  <div class="home-content wrapper">
@@ -35,9 +51,9 @@
 </div ><!-- /#home -->
 
 <!-- Works -->
- <div class="works-content wrapper">
+ <div id="works" class="works-content wrapper">
   <h2 class="works-title">Works</h2>
-  <p>制作事例</p>
+  <h3>制作事例</h3>
  </div>
 
  <div class="wrapper grid">
@@ -52,35 +68,35 @@
  </div><!-- /.works-content -->
 
  <!-- About -->
- <div class="about-content wrapper">
+ <div id="about" class="about-content wrapper">
   <h2 class="about-title">About</h2>
-  <p>私について</p>
+  <h3>私について</h3>
 
-  <h3>かみむら　ちか　Chika Kamimura</h3>
-  <p>神奈川県出身。幼少期は、絵を描くことや手芸などつくることが好きでした。<br>大学では、製品開発やマーケティングについて学びました。<br>子供の幼稚園入園を機に興味があったWebデザインを学び、<br>マーケティングの知識がデザインに活かせることを知りました。<br>自身の「つくったもの」でお客様に喜んでいただくことが目標です。</p>
+  <h4>かみむら　ちか　Chika Kamimura</h4>
+  <p>神奈川県出身。幼少期は、絵を描くことや手芸などつくることが好きでした。<br>大学では、製品開発やマーケティングについて学びました。<br>子供の幼稚園入園を機に興味があったWebデザインを学び、マーケティングの知識がデザインに活かせることを知りました。<br>自身の「つくったもの」でお客様に喜んでいただくことが目標です。</p>
  </div><!-- /.About-content -->
 
  <!-- Skill -->
  <div class="skill-content wrapper">
   <h2 class="skill-title">Skill</h2>
-  <p>できること</p>
+  <h3>できること</h3>
 
-<div class="grid">
+<div class="skills-grid">
 <div class="icon">
 <i class="fa-solid fa-palette"></i>
-<h4>Design</h4>
+<h5>Design</h5>
 <p>バナー、フライヤー、Webサイトなどの作成が出来ます。デザインの基本原則を意識して伝わりやすいデザインを作成します。<br>Tools:Photoshop/Illustrator/Figma/Studio</p>
 </div>
 
 <div class="icon">
 <i class="fa-solid fa-laptop-code"></i>
-<h4>Coding</h4>
+<h5>Coding</h5>
 <p>デザインを正確にコーディングします。分かりやすく、見やすいコーディングを心掛けています。<br>Tools:VisualStudioCode(HTML,CSS/PHP/JavaScript)</p>
 </div>
 
 <div class="icon">
 <i class="fa-solid fa-ranking-star"></i>
-<h4>Marketing</h4>
+<h5>Marketing</h5>
 <p>ターゲットや目的に合わせた訴求内容を考え提案します。マーケティングの視点をデザインに取り入れ、制作します。<br>Tools:GA4/LookerStudio</p>
 </div>
 
@@ -88,21 +104,26 @@
 </div><!-- /.skill-content -->
 
 <!-- Contact -->
-<section class="contact-content wrapper">  
+<section id="contact" class="contact-content wrapper">  
   <h2 class="contact-title">Contact</h2>
-  <p>お問い合わせ</p>
+  <h3>お問い合わせ</h3>
 
-  <!-- ▼ formrun埋め込みフォーム -->
-  <div
-    class="formrun-embed"
-    data-formrun-form="@chika-s-YAjLkeLIJvyUDXUdGVsI"
-    data-formrun-redirect="true"
-  ></div>
-  
-  <!-- ▲ formrun埋め込みフォーム -->
-</section>
+<!-- Formrun 埋め込みフォーム（JavaScript形式） -->
+<div
+  class="formrun-embed"
+  data-formrun-form="@chika-s-YAjLkeLIJvyUDXUdGVsI"
+  data-formrun-redirect="true"
+></div> 
+
 <script src="https://sdk.form.run/js/v2/embed.js"></script>
-<!-- /.contact-content -->
+</section>
+
+<footer>
+  <div class="wrapper">
+      <p><small>&copy; 2025 Chika Kamimura. All Rights Reserved.</small></p>
+    </div>
+</footer>
+
 
 </body>
 </html>
