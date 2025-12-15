@@ -216,6 +216,7 @@ a {
   gap: 70px; /* 各アイコンの間隔 */
   justify-items: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 .icon i {
@@ -332,7 +333,18 @@ footer p {
   .skills-grid p {
     padding: 0 20px;
   }
+　.icon {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
+  .icon p {
+    display: block;      /* inline-block をやめる */
+    text-align: left;    /* 文章だけ左揃え */
+    padding: 0 20px;
+  }
   /* About の文章 */
   .about-content p {
     text-align: left;
