@@ -4,6 +4,9 @@
 *::after {
   box-sizing: border-box;
 }
+html, body {
+  overflow-x: hidden;
+}
 html {
   font-size: 100%;
   scroll-behavior: smooth;
