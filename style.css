@@ -426,4 +426,9 @@ footer p {
   .sp-menu.active {
     right: 0;
   }
+
+  skills-grid .icon p {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
 }
