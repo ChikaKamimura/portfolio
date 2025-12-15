@@ -343,7 +343,9 @@ footer p {
   .icon p {
     display: block;      /* inline-block をやめる */
     text-align: left;    /* 文章だけ左揃え */
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 320px;
   }
   /* About の文章 */
   .about-content p {
