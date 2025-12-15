@@ -1,4 +1,9 @@
 @charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 html {
   font-size: 100%;
   scroll-behavior: smooth;
@@ -273,6 +278,9 @@ footer p {
   レスポンシブ対応
 ====================== */
 @media (max-width: 768px) {
+  .wrapper {
+    padding: 0 2%;
+  }
 
   /* ナビゲーション */
   .pc-nav {
@@ -330,22 +338,16 @@ footer p {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .skills-grid p {
-    padding: 0 20px;
-  }
-　.icon {
+  .icon {
     width: 100%;
-    max-width: 500px;
     margin: 0 auto;
-    text-align: center;
   }
-
   .icon p {
-    display: block;      /* inline-block をやめる */
-    text-align: left;    /* 文章だけ左揃え */
-    margin: 0 auto;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 0;
     padding: 0 1rem;
-    max-width: 320px;
   }
   /* About の文章 */
   .about-content p {
@@ -353,7 +355,7 @@ footer p {
     width: 90%;
   }
 
-  img {
+  .img {
     max-width: 100%;
     height: auto;
   }
