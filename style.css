@@ -344,13 +344,14 @@ footer p {
   .icon {
     width: 100%;
     margin: 0 auto;
+    padding: 0 1.5rem;
   }
   .icon p {
     display: block;
     width: 100%;
     text-align: left;
     margin: 0;
-    padding: 0 1rem;
+    padding: 0;
   }
   /* About の文章 */
   .about-content p {
