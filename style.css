@@ -22,6 +22,13 @@ body{
 a {
   text-decoration: none;
 }
+.wrapper {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 4%;
+}
+
+/* ナビゲーション(PC) */
 .main-nav {
   display: flex;
   font-size: 1.5rem;
@@ -34,7 +41,7 @@ a {
 .main-nav li {
   margin-left: 36px;
 }
-.main-nav a{
+.main-nav a {
   color: rgb(246, 195, 117);
   text-shadow:
     -1px -1px 0 #fff,
@@ -42,7 +49,6 @@ a {
     -1px  1px 0 #fff,
     1px  1px 0 #fff;
 }
-/* ナビゲーション内のリンクにカーソルを乗せたときの文字色を変える */
 .main-nav a:hover {
   color: rgb(116, 125, 120);
 }
@@ -50,12 +56,6 @@ a {
   display: flex;
   justify-content: flex-end;
 }
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 4%;
-}
-/* PC用メニューを表示 */
 .pc-nav {
   display: block;
 }
@@ -63,20 +63,19 @@ a {
 .hamburger {
   display: none;
 }
-.sp-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-}
-
 /*  HOME
 -------------------------------------------------------------- */
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+}
+#home {
+  background-image: url(images/main-bg.png);
+  min-height: 100vh;
+}
 .home-content {
   text-align: center;
-  margin-top: 0%;
 }
-/* 見出し */
 .page-title {
   font-size: 5rem;
   font-family: "Nunito", sans-serif;
@@ -87,352 +86,202 @@ a {
      2px -2px 0 #ffffff,
     -2px  2px 0 #ffffff,
      2px  2px 0 #ffffff;
-  
-/* js */
   background: rgba(197, 222, 202, 0.2);
   display: inline-block;
   padding: 5rem 2rem;
   border-radius:  50%;
 }
-/* 大きな背景画像 */
-.big-bg {
-  background-size: cover;
-  background-position: center top;
+/* セクション共通 */
+.works-content,
+.about-content,
+.skill-content,
+.contact-content {
+text-align: center;
+margin-top: 200px;
+margin-bottom: 50px;
 }
-#home {
-  background-image: url(images/main-bg.png);
-  min-height: 100vh;
+.works-title,
+.about-title,
+.skill-title,
+.contact-title {
+font-size: 3rem;
+color: rgb(246, 195, 117);
+font-family: "Nunito", sans-serif;
+margin-bottom: 2px;
+letter-spacing: 0.05em;
+line-height: 1.1;
 }
-#home .page-title {
-  text-transform: none;
-}
-/* works */
-.works-content {
-  text-align: center;
-  margin-top: 200px;
-  margin-bottom: 50px;
-}
-.works-title {
-  text-align: center;
-  font-size: 3rem;
-  color: rgb(246, 195, 117);
-  font-family: "Nunito", sans-serif;
-  margin-bottom: 2px; 
-  letter-spacing: 0.05em; 
-  line-height: 1.1;
-}
-.works-content h3 {
-  text-align: center;
-  font-size: 1rem;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: normal;
-}
-.works-content p {
-  text-align: center;
-  font-size: 1rem;
-  font-family: "Noto Sans JP", sans-serif;
+h3 {
+font-size: 1rem;
+font-weight: normal;
 }
 
+/* Works */
 .grid {
-  display: grid;
-  gap: 26px;
-  grid-template-columns: auto auto;
-  margin-top: 6%;
-  margin-bottom: 50px;
-  align-items: center;
+display: grid;
+gap: 26px;
+grid-template-columns: repeat(2, 1fr);
+margin-top: 6%;
 }
 .grid img {
-  height: 350px;
-  object-fit: contain;
-  width: 100%;
-}  
-  
-.a4 {
-  aspect-ratio: 210 / 297;
-}  
-.square {
-  aspect-ratio: 1 / 1;
+height: 350px;
+object-fit: contain;
+width: 100%;
 }
 .item {
-  text-align: center;
+text-align: center;
 }
 
-/* about */
-.about-content {
-  text-align: center;
-  margin-top: 200px;
-  margin-bottom: 50px;
-}
-.about-title {
-  text-align: center;
-  font-size: 3rem;
-  color: rgb(246, 195, 117);
-  font-family: "Nunito", sans-serif;
-  margin-bottom: 2px; 
-  letter-spacing: 0.05em; 
-  line-height: 1.1;
-}
-.about-content h3 {
-  text-align: center;
-  font-size: 1rem;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: normal;
-}
-.about-content h4 {
-  margin-top: 80px;
-  margin-bottom: 40px;
-  color: (116, 125, 120);
-}
+/* About */
 .about-content p {
-  display: inline-block;
-  text-align: left;
-  font-size: 1rem;
-  font-family: "Noto Sans JP", sans-serif;
+display: inline-block;
+text-align: left;
 }
 
-/* skill */
-.skill-content {
-  text-align: center;
-  margin-top: 200px;
-  margin-bottom: 50px;
-}
-.skill-title {
-  text-align: center;
-  font-size: 3rem;
-  color: rgb(246, 195, 117);
-  font-family: "Nunito", sans-serif;
-  margin-bottom: 2px; 
-  letter-spacing: 0.05em; 
-  line-height: 1.1;
-}
-.skill-content h3 {
-  text-align: center;
-  font-size: 1rem;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: normal;
-}
-.skill-content h5 {
-  text-align: center;
-  font-size: 1rem;
-  font-family: "Noto Sans JP", sans-serif;
-  color: (116, 125, 120)
-}
+/* Skill */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3列に並べる */
-  gap: 70px; /* 各アイコンの間隔 */
-  justify-items: center;
-  align-items: center;
-  margin-top: 50px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 70px;
+margin-top: 50px;
 }
 .icon {
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 .icon i {
-  font-size: 6rem;
-  color: rgb(197, 222, 202);
-  margin-bottom: 16px;
-  }
+font-size: 6rem;
+color: rgb(197, 222, 202);
+margin-bottom: 16px;
+}
 .icon p {
-  display: block;
-  text-align: left;
-  font-size: 1rem;
-  width: 100%; 
-  font-family: "Noto Sans JP", sans-serif;
-  margin-top: auto;
+text-align: left;
+margin-top: 16px;
 }
 
-/* contact */
-.contact-content {
-  text-align: center;
-  margin-top: 200px;
-  margin-bottom: 0px;
-}
-.contact-title {
-  text-align: center;
-  font-size: 3rem;
-  color: rgb(246, 195, 117);
-  font-family: "Nunito", sans-serif;
-  margin-bottom: 2px; 
-  letter-spacing: 0.05em; 
-  line-height: 1.1;
-}
-.contact-content h3 {
-  text-align: center;
-  font-size: 1rem;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: normal;
-}
-
+/* Footer */
 footer {
-  background: #c5deca;
-  padding: 2rem 0;
-  width: 100%;
-  margin: 0;
-}
-footer .wrapper {
-  padding: 0;
-  max-width: none;   
+background: #c5deca;
+padding: 2rem 0;
 }
 footer p {
-  color: #333;
-  font-size: 0.875rem;
-  text-align: center;
+text-align: center;
+font-size: 0.875rem;
 }
 
-/* ======================
-  レスポンシブ対応
-====================== */
+/* タブレット */
 @media (max-width: 768px) {
-  .wrapper {
-    padding: 0 2%;
-  }
 
-  /* ナビゲーション */
-  .pc-nav {
-    display: none;
+.wrapper {
+padding: 0 2%;
+}
+.sp-menu a {
+    color: rgb(246, 195, 117);
+    font-size: 1.2rem;
+    text-shadow:
+      -1px -1px 0 #fff,
+       1px -1px 0 #fff,
+      -1px  1px 0 #fff,
+       1px  1px 0 #fff;
+    text-decoration: none; 
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
   }
-  .sp-nav,
-  .hamburger {
-    display: block;
-  }
-  .main-nav {
-    font-size: 1rem;
-    margin-top: 10px;
-    gap: 10px;
-  }
-  .main-nav li {
-    margin-left: 10px;
-  }
-
-  /* ファーストビュー */
-  #home {
-    position: relative;
-    min-height: 70vh;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  .page-title {
-    font-size: 2.5rem;
-    padding: 3rem 1.5rem;
-  }
-   .home-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-  }
-
-  /* 全体の余白縮小 */
-  .works-content,
-  .about-content,
-  .skill-content,
-  .contact-content {
-    margin-top: 100px;
-  }
-
-  /* Worksを1列に */
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  /* Skill のアイコンを1列に */
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .icon {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    justify-items: center;
-  }
-  .icon i {
-    font-size: 5rem;
-  }
-  .icon p {
-    text-align: left;
-    margin-top: 16px;
-    padding: 0;
-    width: auto;
-  }
-  /* About の文章 */
-  .about-content p {
-    text-align: left;
-    width: 90%;
-  }
-
-  .img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* ▼ハンバーガー表示 */
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    position: fixed;
-    top: 30px;
-    right: 40px;
-    z-index: 2000;
-    height: auto;
-    overflow: visible;
-    top: 25px;
+.pc-nav {
+display: none;
+}
+.sp-nav,
+.hamburger {
+display: block;
+}
+#home {
+min-height: 70vh;
+}
+.page-title {
+font-size: 2.5rem;
+padding: 3rem 1.5rem;
+}
+.grid {
+grid-template-columns: 1fr;
+}
+.skills-grid {
+grid-template-columns: 1fr;
+gap: 40px;
+}
+.icon {
+max-width: 500px;
+margin: 0 auto;
+padding: 0 1rem;
+}
+/* ハンバーガーメニュー */
+.hamburger {
+z-index: 2000;
+display: flex;
+flex-direction: column;
+cursor: pointer;
+margin-top: 20px;
+}
 }
 .hamburger span {
-  background: rgb(246, 195, 117);
-  height: 3px;
-  width: 36px;
-  margin: 4px 0;
-  border-radius: 2px;
-  transition: 0.35s ease;
-  transform-origin: center;
+height: 3px;
+width: 36px;
+margin: 4px 0;
+border-radius: 2px;
+background: rgb(246, 195, 117);
+transition: 0.35s ease;
+transform-origin: center;
 }
 .hamburger.active span:nth-child(1) {
   transform: translateY(10.5px) rotate(45deg);
 }
 .hamburger.active span:nth-child(2) {
-  opacity: 0; 
+  opacity: 0;
 }
 .hamburger.active span:nth-child(3) {
   transform: translateY(-10.5px) rotate(-45deg);
 }
 
-  /* ▼スマホ用スライドメニュー */
-  .sp-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 220px;
-    height: 100vh;
-    background:#fff;
-    padding-top: 80px;
-    list-style: none;
-    transition: right 0.3s;
-    margin: 0;
-    z-index: 1500;
-  }
+.sp-menu {
+position: fixed;
+top: 0;
+right: -100%;
+width: 220px;
+height: 100vh;
+background: #fff;
+padding-top: 80px;
+list-style: none;
+transition: right 0.3s;
+margin: 0;
+z-index: 1500;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+padding-top: 120px;
+}
+.sp-menu li {
+  margin: 20px 0;
+}
+.sp-menu.active {
+right: 0;
+}
 
-  .sp-menu li {
-    margin: 20px;
-  }
+/* スマホ */
+@media (max-width: 375px) {
 
-  .sp-menu a {
-    color: rgb(246, 195, 117);
-    font-family: "Nunito", sans-serif;
-    font-weight: 700;
-    font-size: 1.3rem;
-  }
-
-  /* 開いたとき */
-  .sp-menu.active {
-    right: 0;
-  }
+.page-title {
+font-size: 2rem;
+padding: 2.5rem 1.2rem;
+}
+.icon p {
+font-size: 0.95rem;
+line-height: 1.6;
+}
+.works-content,
+.about-content,
+.skill-content,
+.contact-content {
+margin-top: 80px;
+}
 }
