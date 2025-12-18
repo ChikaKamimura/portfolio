@@ -210,9 +210,12 @@ grid-template-columns: 1fr;
 gap: 40px;
 }
 .icon {
-max-width: 500px;
+align-items: center;
+}
+.icon p{
+max-width: 90%;
 margin: 0 auto;
-padding: 0 1rem;
+text-align: left;
 }
 /* ハンバーガーメニュー */
 .hamburger {
@@ -277,6 +280,7 @@ padding: 2.5rem 1.2rem;
 .icon p {
 font-size: 0.95rem;
 line-height: 1.6;
+ max-width: 92%;
 }
 .works-content,
 .about-content,
