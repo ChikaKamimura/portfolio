@@ -120,7 +120,7 @@ font-weight: normal;
 .grid {
 display: grid;
 gap: 26px;
-grid-template-columns: repeat(2, 1fr);
+grid-template-columns: repeat(3, 1fr);
 margin-top: 6%;
 }
 .grid img {
@@ -213,9 +213,9 @@ gap: 40px;
 align-items: center;
 }
 .icon p{
-max-width: 90%;
 margin: 0 auto;
 text-align: left;
+max-width: 90%;
 }
 /* ハンバーガーメニュー */
 .hamburger {
@@ -280,7 +280,6 @@ padding: 2.5rem 1.2rem;
 .icon p {
 font-size: 0.95rem;
 line-height: 1.6;
- max-width: 92%;
 }
 .works-content,
 .about-content,
