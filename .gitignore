@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# VS Code設定
+.vscode/
+
+# ログファイル
+*.log
+
+# node_modules (もし Node.js 使う場合)
+node_modules/
+
