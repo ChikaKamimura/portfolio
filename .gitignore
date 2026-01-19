@@ -9,4 +9,7 @@
 
 # node_modules (もし Node.js 使う場合)
 node_modules/
+.DS_Store
+
+
 
